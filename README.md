@@ -22,8 +22,8 @@ This repository tracks my journey in core programming, algorithms, and practical
 | **Web** | [Precision Stopwatch](./web/stopwatch/) | HTML5, CSS3, JS | Millisecond stopwatch with drift-free delta timing, split laps, and fastest/slowest detection | ✅ Complete |
 | **Python** | [Number Guessing Game](./python/number_guessing_game/) | Python 3 | Interactive terminal game with difficulty tiers, statistical tracking, and input sanitization | ✅ Complete |
 | **Python** | [Secure Password Generator](./python/password_generator/) | Python 3 | Cryptographically secure customizable password generator with Shannon entropy evaluation | ✅ Complete |
-| **C++** | [Student Grading System](./cpp/student_grading_system/) | C++ | Terminal-based student record manager with GPA computation and tabular summary reports | ⏳ Phase 3 |
-| **C++** | [Pattern Generator](./cpp/pattern_generator/) | C++ | Algorithmic generator for geometric, pyramid, and number series patterns | ⏳ Phase 3 |
+| **C++** | [Student Grading System](./cpp/student_grading_system/) | C++ | Terminal-based student record manager with GPA computation and tabular summary reports | ✅ Complete |
+| **C++** | [Pattern Generator](./cpp/pattern_generator/) | C++ | Algorithmic generator for geometric, pyramid, diamond, and Pascal's triangle patterns | ✅ Complete |
 
 ---
 
@@ -42,6 +42,7 @@ This repository tracks my journey in core programming, algorithms, and practical
 - Modern web browser (Chrome, Edge, Firefox, Brave)
 - [Python 3.8+](https://www.python.org/) for Python modules
 - [GCC / G++](https://gcc.gnu.org/) (MinGW for Windows) for C++ programs
+- [Node.js](https://nodejs.org/) (optional, for web verification suite)
 
 ### Clone & Explore
 ```bash
@@ -49,12 +50,12 @@ git clone https://github.com/moominsedeeq-a11y/developer-practice-lab.git
 cd developer-practice-lab
 ```
 
-### Running Web Applications
+### 1. Running Web Applications
 Navigate to the desired web directory and open `index.html` in any browser:
 - Calculator: `web/calculator/index.html`
 - Stopwatch: `web/stopwatch/index.html`
 
-### Running Python Applications
+### 2. Running Python Applications
 Execute directly from the repository root:
 ```bash
 # Number Guessing Game:
@@ -64,14 +65,32 @@ python python/number_guessing_game/game.py
 python python/password_generator/generator.py
 ```
 
-### Running Automated Test Suites
+### 3. Compiling & Running C++ Applications
+Compile and run with `g++`:
 ```bash
-# Web verification suite (Node.js):
-node tests/phase1_tests.js
+# Student Grading System:
+g++ -std=c++11 -O2 cpp/student_grading_system/main.cpp -o student_system.exe
+.\student_system.exe
 
-# Python unit test suite (unittest):
-python tests/test_python_projects.py
+# Algorithmic Pattern Generator:
+g++ -std=c++11 -O2 cpp/pattern_generator/patterns.cpp -o patterns.exe
+.\patterns.exe
 ```
+
+---
+
+## 🧪 Unified Automated Testing
+
+Run the master test runner to execute the automated test suites across all three language ecosystems simultaneously:
+
+```bash
+python tests/run_all_tests.py
+```
+
+Individual test suites:
+- Web unit tests: `node tests/phase1_tests.js`
+- Python unit tests: `python tests/test_python_projects.py`
+- C++ self-tests: `.\student_system.exe --test` & `.\patterns.exe --test`
 
 ---
 
@@ -79,7 +98,7 @@ python tests/test_python_projects.py
 
 - [x] **Phase 1 (Web Fundamentals)**: Implement responsive Calculator and Precision Stopwatch with unit tests and full documentation.
 - [x] **Phase 2 (Python Essentials)**: Build CLI Number Guessing Game and Secure Password Generator with automated `unittest` coverage.
-- [ ] **Phase 3 (C++ Fundamentals)**: Implement Student Grading System and Algorithmic Pattern Generator using object-oriented principles.
+- [x] **Phase 3 (C++ Fundamentals)**: Implement Student Grading System and Algorithmic Pattern Generator using object-oriented principles.
 - [ ] **Phase 4 (Expansion)**: Add To-Do List application, Unit Converter, and File Organization utility.
 
 ---
