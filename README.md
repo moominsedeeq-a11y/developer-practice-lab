@@ -9,7 +9,7 @@ This repository tracks my journey in core programming, algorithms, and practical
 ## 🛠️ Languages & Technologies
 
 - **Web Technologies:** HTML5, CSS3, Vanilla JavaScript (ES6+)
-- **Systems & Scripting:** Python 3, C++ (C++11/C++14 via GCC/MinGW)
+- **Systems & Scripting:** Python 3 (3.8+), C++ (C++11/C++14 via GCC/MinGW)
 - **Version Control & Tooling:** Git, VS Code, PowerShell
 
 ---
@@ -20,8 +20,8 @@ This repository tracks my journey in core programming, algorithms, and practical
 |:---|:---|:---|:---|:---:|
 | **Web** | [Personal Calculator](./web/calculator/) | HTML5, CSS3, JS | Responsive arithmetic calculator with keyboard support and floating-point precision guards | ✅ Complete |
 | **Web** | [Precision Stopwatch](./web/stopwatch/) | HTML5, CSS3, JS | Millisecond stopwatch with drift-free delta timing, split laps, and fastest/slowest detection | ✅ Complete |
-| **Python** | [Number Guessing Game](./python/number_guessing_game/) | Python 3 | Interactive terminal game with difficulty tiers, statistical tracking, and input sanitization | ⏳ Phase 2 |
-| **Python** | [Secure Password Generator](./python/password_generator/) | Python 3 | Cryptographically secure customizable password generator with strength evaluation | ⏳ Phase 2 |
+| **Python** | [Number Guessing Game](./python/number_guessing_game/) | Python 3 | Interactive terminal game with difficulty tiers, statistical tracking, and input sanitization | ✅ Complete |
+| **Python** | [Secure Password Generator](./python/password_generator/) | Python 3 | Cryptographically secure customizable password generator with Shannon entropy evaluation | ✅ Complete |
 | **C++** | [Student Grading System](./cpp/student_grading_system/) | C++ | Terminal-based student record manager with GPA computation and tabular summary reports | ⏳ Phase 3 |
 | **C++** | [Pattern Generator](./cpp/pattern_generator/) | C++ | Algorithmic generator for geometric, pyramid, and number series patterns | ⏳ Phase 3 |
 
@@ -49,14 +49,36 @@ git clone https://github.com/moominsedeeq-a11y/developer-practice-lab.git
 cd developer-practice-lab
 ```
 
-To run individual web projects, navigate to their respective subfolder (e.g., `web/calculator/` or `web/stopwatch/`) and open `index.html` in your web browser.
+### Running Web Applications
+Navigate to the desired web directory and open `index.html` in any browser:
+- Calculator: `web/calculator/index.html`
+- Stopwatch: `web/stopwatch/index.html`
+
+### Running Python Applications
+Execute directly from the repository root:
+```bash
+# Number Guessing Game:
+python python/number_guessing_game/game.py
+
+# Secure Password Generator:
+python python/password_generator/generator.py
+```
+
+### Running Automated Test Suites
+```bash
+# Web verification suite (Node.js):
+node tests/phase1_tests.js
+
+# Python unit test suite (unittest):
+python tests/test_python_projects.py
+```
 
 ---
 
 ## 📋 Roadmap
 
 - [x] **Phase 1 (Web Fundamentals)**: Implement responsive Calculator and Precision Stopwatch with unit tests and full documentation.
-- [ ] **Phase 2 (Python Essentials)**: Build CLI Number Guessing Game and Secure Password Generator with automated test coverage.
+- [x] **Phase 2 (Python Essentials)**: Build CLI Number Guessing Game and Secure Password Generator with automated `unittest` coverage.
 - [ ] **Phase 3 (C++ Fundamentals)**: Implement Student Grading System and Algorithmic Pattern Generator using object-oriented principles.
 - [ ] **Phase 4 (Expansion)**: Add To-Do List application, Unit Converter, and File Organization utility.
 
