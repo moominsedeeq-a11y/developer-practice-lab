@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A precision digital stopwatch with lap recording and keyboard controls, built with vanilla HTML, CSS, and JavaScript.">
+  <title>Precision Stopwatch | Developer Practice Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="stopwatch-wrapper">
+    <div class="stopwatch-card" role="region" aria-label="Digital Stopwatch">
+      <header class="stopwatch-header">
+        <h1 class="stopwatch-title">Precision Stopwatch</h1>
+        <span class="badge">Vanilla JS</span>
+      </header>
+
+      <!-- Digital Display -->
+      <section class="display-panel" aria-live="off">
+        <div class="time-readout" id="timeDisplay" aria-label="Stopwatch elapsed time">
+          <span class="time-segment" id="hours">00</span><span class="colon">:</span><span class="time-segment" id="minutes">00</span><span class="colon">:</span><span class="time-segment" id="seconds">00</span><span class="dot">.</span><span class="time-segment ms" id="milliseconds">000</span>
+        </div>
+      </section>
+
+      <!-- Controls -->
+      <section class="controls-panel" role="group" aria-label="Stopwatch controls">
+        <button type="button" class="btn btn-primary" id="startPauseBtn" aria-label="Start stopwatch">Start</button>
+        <button type="button" class="btn btn-secondary" id="lapBtn" disabled aria-label="Record lap time">Lap</button>
+        <button type="button" class="btn btn-danger" id="resetBtn" disabled aria-label="Reset stopwatch">Reset</button>
+      </section>
+
+      <!-- Laps List -->
+      <section class="laps-container" id="lapsContainer" aria-label="Recorded lap splits">
+        <div class="laps-header">
+          <span>Lap</span>
+          <span>Lap Time</span>
+          <span>Total Time</span>
+        </div>
+        <div class="laps-list" id="lapsList" role="list">
+          <p class="no-laps-msg" id="noLapsMsg">No laps recorded yet.</p>
+        </div>
+      </section>
+
+      <footer class="stopwatch-footer">
+        <p class="hint">Hotkeys: <kbd>Space</kbd> Start/Pause &bull; <kbd>L</kbd> Lap &bull; <kbd>R</kbd> Reset</p>
+      </footer>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
